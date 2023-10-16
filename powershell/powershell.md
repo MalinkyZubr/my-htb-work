@@ -22,4 +22,11 @@
   * no integrated scripting environment ISE
   * no access to .net
   * only windows
-* 
+* ssh htb-student@<IP-Address> 
+
+### CMD.exe
+* C:\Windows\System32\cmd.exe
+* windows r to open 
+* we can access cmd.exe via the recovery boot
+  * then we replace the stickey keys.exe with another copy of cmd.exe
+  * if we enable stickey keys now, the cmd prompt opens with high priveleges
